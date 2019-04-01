@@ -14,7 +14,7 @@ from tensorflow.python.saved_model.signature_def_utils_impl import build_signatu
 K.set_learning_phase(0)
 K.set_image_data_format('channels_last')
 
-INPUT_MODEL = '/home/techvamp/Documents/Project/retina/training_code/cross_validation_models/Architecture3/cross_validation_v4_arc_red_4lyr.h5'
+INPUT_MODEL = '/home/techvamp/Documents/Project/classifier_keras.h5'
 NUMBER_OF_OUTPUTS = 1
 OUTPUT_NODE_PREFIX = 'output_node'
 OUTPUT_FOLDER= 'frozen'
@@ -58,8 +58,6 @@ OUTPUT_TENSOR = output_node_names
 with tf.Session(graph=tf.Graph()) as sess:
     tf.import_graph_def(graph_def, name="")
     g = tf.get_default_graph()
-    #sigs[signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY] = \
-        #tf.saved_model.signature_def_utils.predict_signature_def(inputs={'images': model.input},outputs={'scores': model.output})
     signature = predict_signature_def(inputs={'images': model.input},outputs={'scores': model.output})
 
 
