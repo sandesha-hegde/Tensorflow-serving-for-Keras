@@ -19,7 +19,7 @@ TensorFlow Serving is a flexible, high-performance serving system for machine le
 - Add the keras model path,output folder for tf model storage, output_servable_folder for hosting model in `tf_server.py` script.
 - Create a folder called `serving/versions/1` 
 - Copy the servable model and variables in the above path
--  Run the tensorflow server: command `tensorflow_model_server --port=9000 --model_name=<<name of the model>> --model_base_path=<<path to this dir serving/versions>>`
+-  Run the tensorflow server: command `tensorflow_model_server --port=<<port number>> --model_name=<<name of the model>> --model_base_path=<<path to this dir serving/versions>>`
 - Example: `tensorflow_model_server --port=9000 --model_name=classifier --model_base_path=/home/techvamp/Documents/Project/classifier/tf_serving/serving/versions`
 - Testing the hosted model from the client can be done by executing `tf_client.py`
 
