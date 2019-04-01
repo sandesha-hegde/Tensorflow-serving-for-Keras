@@ -11,9 +11,8 @@ TensorFlow Serving is a flexible, high-performance serving system for machine le
 
 ## Usage
 - This script can be used to host the keras model which are saved in `.h5` type file.
-
 - So this script can also used to convert the keras model to tensorflow format(.pb) for serving.
--`tf-client` script is a client for hosted model.
+- `tf-client` script is a client for hosted model.
 
 ## Insrtuction
 - Install the `Requirements`
