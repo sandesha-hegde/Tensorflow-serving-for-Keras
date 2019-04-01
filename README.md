@@ -6,7 +6,7 @@ TensorFlow Serving is a flexible, high-performance serving system for machine le
 
 ## Requirements
 - tensorflow
-- tensorflow-serve-model
+- tensorflow-model-server
 - keras
 
 ## Usage
